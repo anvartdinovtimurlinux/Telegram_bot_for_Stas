@@ -2,7 +2,7 @@ import telebot
 from main import main
 
 
-bot = telebot.TeleBot('1207374644:AAFcBG7zPPIokte8LmQgru2cebBn-yWdnm8')
+bot = telebot.TeleBot(TOKEN)
 chat_id = ''
 
 # Настройки прокси
