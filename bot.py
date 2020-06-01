@@ -4,6 +4,7 @@ from main import main
 
 with open('token.txt', 'r', encoding='utf-8') as t:
     TOKEN = t.readline()
+
 bot = telebot.TeleBot(TOKEN)
 chat_id = ''
 
