@@ -2,7 +2,9 @@ import telebot
 from main import main
 
 
-bot = telebot.TeleBot('1207374644:AAFcBG7zPPIokte8LmQgru2cebBn-yWdnm8')
+with open('token.txt', 'r', encoding='utf-8') as t:
+    TOKEN = t.readline()
+bot = telebot.TeleBot(TOKEN)
 chat_id = ''
 
 # Настройки прокси
@@ -29,7 +31,7 @@ def get_text_messages(message):
     elif message.text == "/help":
         bot.send_message(message.from_user.id, "Просто загрузи сюда файл в формате .xlsx.\n"
                                                "Кошельки должны быть перечислены в первом столбце. "
-                                               "Заголовок столбцу не нужен.'")
+                                               "Заголовок столбцу не нужен.")
     else:
         bot.send_message(message.from_user.id, "Я тебя не понимаю. Напиши /help.")
 

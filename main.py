@@ -66,6 +66,8 @@ def main(data_file):
         wallets_with_coin[wallet] = coin_num
         print(f'{wallet}: {coin_num} BTC')  # убрать строку
         summa += coin_num
+
+    print(f'Сумма равна: {summa}\n')
     write_to_file(wallets_with_coin, summa, 'result.xlsx')
 
 
